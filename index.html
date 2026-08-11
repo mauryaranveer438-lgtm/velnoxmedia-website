@@ -4,1096 +4,925 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VelnoxMedia — Premium Video Editing Agency</title>
+<title>VelnoxMedia — Creative Editing Agency</title>
 
-<meta name="description" content="VelnoxMedia is a premium video editing agency connecting creators and businesses with skilled video editors.">
+<meta name="description"
+content="VelnoxMedia is a professional creative editing agency delivering premium short-form, long-form and social media video content.">
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#050507;
-  color:#fff;
-  line-height:1.6;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050505;
+    color:#fff;
+    line-height:1.6;
 }
 
 a{
-  color:inherit;
-  text-decoration:none;
+    text-decoration:none;
+    color:inherit;
 }
 
 .container{
-  width:min(1180px,92%);
-  margin:auto;
+    width:min(1180px,92%);
+    margin:auto;
 }
 
 /* NAVBAR */
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(5,5,7,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid #1c1c25;
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(5,5,5,.82);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.nav-inner{
-  min-height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.nav{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:21px;
-  font-weight:800;
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:-1px;
 }
 
-.logo-mark{
-  width:38px;
-  height:38px;
-  border-radius:12px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg,#7c3cff,#315cff);
-  font-weight:900;
+.logo span{
+    opacity:.45;
 }
 
 .nav-links{
-  display:flex;
-  gap:27px;
-  font-size:14px;
-  color:#c8c8d2;
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#aaa;
+    font-size:14px;
+    transition:.3s;
 }
 
 .nav-links a:hover{
-  color:#fff;
+    color:#fff;
 }
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:13px 21px;
-  border-radius:10px;
-  border:1px solid #30303c;
-  font-weight:700;
-  cursor:pointer;
-  transition:.25s;
-}
-
-.btn-primary{
-  border:0;
-  background:linear-gradient(135deg,#7c3cff,#315cff);
-}
-
-.btn:hover{
-  transform:translateY(-2px);
+.nav-btn{
+    padding:11px 18px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:30px;
+    font-size:13px!important;
+    color:#fff!important;
 }
 
 /* HERO */
+
 .hero{
-  min-height:680px;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:130px 0 80px;
+    position:relative;
+    overflow:hidden;
 }
 
 .hero:before{
-  content:"";
-  position:absolute;
-  width:650px;
-  height:650px;
-  background:#6428ff;
-  filter:blur(180px);
-  opacity:.20;
-  right:-200px;
-  top:-150px;
-}
-
-.hero-content{
-  width:55%;
-  position:relative;
-  z-index:2;
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#fff;
+    opacity:.035;
+    filter:blur(100px);
+    border-radius:50%;
+    right:-150px;
+    top:100px;
 }
 
 .badge{
-  display:inline-block;
-  padding:7px 13px;
-  border:1px solid #49308a;
-  background:#110b20;
-  color:#b99aff;
-  border-radius:30px;
-  font-size:12px;
-  letter-spacing:1px;
-  margin-bottom:20px;
+    display:inline-flex;
+    padding:8px 14px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:30px;
+    color:#aaa;
+    font-size:12px;
+    margin-bottom:25px;
 }
 
 .hero h1{
-  font-size:clamp(45px,6vw,76px);
-  line-height:1.02;
-  letter-spacing:-3px;
-  margin-bottom:22px;
+    font-size:clamp(52px,9vw,105px);
+    line-height:.93;
+    letter-spacing:-6px;
+    max-width:950px;
 }
 
-.gradient-text{
-  background:linear-gradient(90deg,#9b5cff,#5c7cff);
-  -webkit-background-clip:text;
-  color:transparent;
+.hero h1 span{
+    color:#777;
 }
 
 .hero p{
-  color:#aaaab6;
-  max-width:620px;
-  font-size:17px;
-  margin-bottom:30px;
+    color:#999;
+    max-width:650px;
+    font-size:18px;
+    margin:30px 0;
 }
 
-.hero-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
 }
 
-.hero-visual{
-  position:absolute;
-  right:-30px;
-  width:48%;
-  height:480px;
-  border-radius:30px;
-  background:
-    radial-gradient(circle at 70% 30%,#5323bb,transparent 35%),
-    linear-gradient(135deg,#16131f,#08080b);
-  border:1px solid #2c253d;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 100px rgba(106,48,255,.18);
+.btn{
+    padding:15px 23px;
+    border-radius:8px;
+    font-weight:700;
+    font-size:14px;
+    transition:.3s;
+    display:inline-block;
 }
 
-.monitor{
-  width:75%;
-  padding:10px;
-  border-radius:14px;
-  background:#111;
-  border:5px solid #24242b;
-  box-shadow:0 30px 60px #000;
+.btn-primary{
+    background:#fff;
+    color:#000;
 }
 
-.screen{
-  height:260px;
-  border-radius:7px;
-  background:
-    linear-gradient(135deg,rgba(123,60,255,.35),transparent),
-    linear-gradient(45deg,#172033,#101015);
-  position:relative;
-  overflow:hidden;
+.btn-primary:hover{
+    transform:translateY(-3px);
 }
 
-.timeline{
-  position:absolute;
-  left:8%;
-  right:8%;
-  bottom:18px;
-  height:40px;
-  background:#15151b;
-  border:1px solid #393943;
-  display:flex;
-  gap:5px;
-  padding:5px;
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.18);
+    color:#fff;
 }
 
-.timeline span{
-  flex:1;
-  border-radius:4px;
-  background:linear-gradient(90deg,#713cff,#263eff);
+.btn-secondary:hover{
+    background:#fff;
+    color:#000;
 }
 
 /* STATS */
+
 .stats{
-  margin-top:-45px;
-  position:relative;
-  z-index:5;
+    padding:45px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.stats-box{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  background:#0d0d12;
-  border:1px solid #24242d;
-  border-radius:18px;
-  overflow:hidden;
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
 .stat{
-  text-align:center;
-  padding:25px 15px;
-  border-right:1px solid #25252d;
-}
-
-.stat:last-child{
-  border-right:0;
+    text-align:center;
 }
 
 .stat h3{
-  font-size:29px;
-  color:#9a6cff;
+    font-size:38px;
 }
 
 .stat p{
-  color:#888894;
-  font-size:13px;
+    color:#777;
+    font-size:13px;
 }
 
 /* SECTIONS */
+
 section{
-  padding:100px 0;
+    padding:110px 0;
 }
 
 .section-label{
-  color:#9564ff;
-  font-size:12px;
-  letter-spacing:2px;
-  font-weight:bold;
-  margin-bottom:10px;
+    color:#777;
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:15px;
 }
 
 .section-title{
-  font-size:42px;
-  line-height:1.15;
-  margin-bottom:14px;
-}
-
-.section-subtitle{
-  color:#90909b;
-  max-width:650px;
+    font-size:clamp(38px,6vw,68px);
+    letter-spacing:-3px;
+    line-height:1;
+    margin-bottom:55px;
 }
 
 /* SERVICES */
-.services-grid{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:17px;
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
 }
 
-.card{
-  background:linear-gradient(145deg,#101015,#09090d);
-  border:1px solid #25252e;
-  border-radius:17px;
-  padding:28px;
-  transition:.25s;
+.service{
+    padding:35px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:16px;
+    background:rgba(255,255,255,.025);
+    transition:.3s;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-  border-color:#6840c4;
+.service:hover{
+    transform:translateY(-5px);
+    border-color:rgba(255,255,255,.3);
 }
 
-.icon{
-  width:48px;
-  height:48px;
-  display:grid;
-  place-items:center;
-  border-radius:13px;
-  background:#191127;
-  color:#a674ff;
-  font-size:23px;
-  margin-bottom:20px;
+.service-number{
+    color:#555;
+    font-size:12px;
 }
 
-.card h3{
-  margin-bottom:9px;
+.service h3{
+    margin:30px 0 10px;
+    font-size:25px;
 }
 
-.card p{
-  color:#888894;
-  font-size:14px;
+.service p{
+    color:#888;
+    font-size:14px;
 }
 
-/* WORK */
-.work-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:40px;
+/* PORTFOLIO */
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
 }
 
-.work-card{
-  background:#101014;
-  border:1px solid #25252d;
-  border-radius:16px;
-  overflow:hidden;
+.work{
+    min-height:340px;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.1);
+    position:relative;
+    background:linear-gradient(135deg,#151515,#050505);
 }
 
-.work-image{
-  height:190px;
-  display:flex;
-  align-items:flex-end;
-  padding:18px;
-  font-size:25px;
-  font-weight:900;
-  background:
-    radial-gradient(circle at 70% 30%,#6333c9,transparent 35%),
-    linear-gradient(135deg,#172033,#08080a);
+.work-content{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:30px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
 }
 
-.work-info{
-  padding:18px;
+.work small{
+    color:#888;
 }
 
-.work-info p{
-  color:#8e8e98;
-  font-size:13px;
+.work h3{
+    font-size:26px;
+    margin-top:5px;
 }
 
-/* EDITORS */
-.editors{
-  background:#08080c;
+/* NETWORK */
+
+.network{
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:22px;
+    padding:55px;
+    background:linear-gradient(135deg,#101010,#070707);
 }
 
-.editor-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:17px;
-  margin-top:40px;
+.network-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
-.editor{
-  background:#101015;
-  border:1px solid #25252e;
-  border-radius:16px;
-  padding:20px;
-  text-align:center;
+.network h2{
+    font-size:clamp(35px,5vw,60px);
+    line-height:1;
+    letter-spacing:-3px;
 }
 
-.avatar{
-  width:76px;
-  height:76px;
-  border-radius:50%;
-  margin:0 auto 15px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg,#703bff,#283fff);
-  font-size:25px;
-  font-weight:bold;
+.network p{
+    color:#888;
+    margin-top:20px;
 }
 
-.editor p{
-  color:#898993;
-  font-size:13px;
+.network-list{
+    display:grid;
+    gap:15px;
 }
 
-.tags{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:6px;
-  margin-top:12px;
+.network-item{
+    padding:20px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;
 }
 
-.tag{
-  font-size:10px;
-  padding:5px 8px;
-  background:#1a1724;
-  color:#b89bff;
-  border-radius:5px;
+.network-item strong{
+    display:block;
+    margin-bottom:4px;
 }
 
-/* WHY */
-.why-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
+.network-item span{
+    color:#777;
+    font-size:13px;
 }
 
-.check-list{
-  margin-top:25px;
-  display:grid;
-  gap:14px;
+/* PROCESS */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
-.check{
-  display:flex;
-  gap:12px;
-  color:#c9c9d1;
+.step{
+    padding:28px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:14px;
 }
 
-.check b{
-  color:#9b6bff;
+.step-number{
+    font-size:12px;
+    color:#666;
+}
+
+.step h3{
+    margin:35px 0 10px;
+}
+
+.step p{
+    color:#777;
+    font-size:13px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.about h2{
+    font-size:clamp(38px,5vw,60px);
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.about p{
+    color:#888;
+    margin-bottom:18px;
 }
 
 /* CTA */
+
 .cta{
-  margin:0 auto 100px;
-  width:min(1180px,92%);
-  padding:60px;
-  border-radius:25px;
-  background:linear-gradient(120deg,#6029dc,#2949e8);
-  text-align:center;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    padding:90px 30px;
+    background:linear-gradient(135deg,#111,#070707);
 }
 
 .cta h2{
-  font-size:42px;
-  margin-bottom:12px;
+    font-size:clamp(42px,7vw,82px);
+    letter-spacing:-4px;
+    line-height:1;
 }
 
 .cta p{
-  color:#ddd;
-  margin-bottom:25px;
-}
-
-.cta .btn{
-  background:#050507;
-  border:0;
+    color:#777;
+    max-width:550px;
+    margin:25px auto 35px;
 }
 
 /* FOOTER */
+
 footer{
-  border-top:1px solid #202027;
-  padding:55px 0 25px;
-  color:#888894;
+    padding:50px 0;
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
 .footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:35px;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
 }
 
-.footer-logo{
-  color:#fff;
-  font-size:20px;
-  font-weight:800;
-  margin-bottom:12px;
+.footer-left p{
+    color:#666;
+    font-size:13px;
+    margin-top:8px;
 }
 
-footer h4{
-  color:#fff;
-  margin-bottom:14px;
+.footer-links{
+    display:flex;
+    gap:20px;
+    color:#777;
+    font-size:13px;
 }
 
-footer a{
-  display:block;
-  margin:7px 0;
-  font-size:13px;
-}
-
-.copyright{
-  border-top:1px solid #202027;
-  margin-top:40px;
-  padding-top:20px;
-  text-align:center;
-  font-size:12px;
+.footer-links a:hover{
+    color:#fff;
 }
 
 /* MOBILE */
-@media(max-width:900px){
 
-  .nav-links{
-    display:none;
-  }
+@media(max-width:800px){
 
-  .hero{
-    min-height:auto;
-    padding:90px 0 70px;
-  }
+    .nav-links a:not(.nav-btn){
+        display:none;
+    }
 
-  .hero-content{
-    width:100%;
-  }
+    .hero h1{
+        letter-spacing:-4px;
+    }
 
-  .hero-visual{
-    display:none;
-  }
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:35px 10px;
+    }
 
-  .hero h1{
-    font-size:48px;
-  }
+    .services,
+    .portfolio,
+    .about,
+    .network-grid{
+        grid-template-columns:1fr;
+    }
 
-  .stats{
-    margin-top:0;
-  }
+    .process{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .stats-box{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .network{
+        padding:30px;
+    }
 
-  .stat:nth-child(2){
-    border-right:0;
-  }
+    section{
+        padding:80px 0;
+    }
 
-  .services-grid,
-  .work-grid{
-    grid-template-columns:1fr;
-  }
-
-  .editor-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .footer-grid{
+        flex-direction:column;
+    }
 }
 
-@media(max-width:520px){
+@media(max-width:500px){
 
-  section{
-    padding:70px 0;
-  }
+    .process{
+        grid-template-columns:1fr;
+    }
 
-  .hero h1{
-    font-size:43px;
-    letter-spacing:-2px;
-  }
+    .hero p{
+        font-size:16px;
+    }
 
-  .hero p{
-    font-size:15px;
-  }
+    .service{
+        padding:25px;
+    }
 
-  .stats-box{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .editor-grid{
-    grid-template-columns:1fr;
-  }
-
-  .section-title{
-    font-size:34px;
-  }
-
-  .cta{
-    padding:40px 20px;
-  }
-
-  .cta h2{
-    font-size:32px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
+    .work{
+        min-height:280px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="container nav-inner">
+<header>
+<div class="container nav">
 
-    <a href="#" class="logo">
-      <span class="logo-mark">V</span>
-      VelnoxMedia
-    </a>
+<a href="#" class="logo">Velnox<span>Media</span></a>
 
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#work">Our Work</a>
-      <a href="#editors">Editors</a>
-      <a href="#why">Why Us</a>
-    </div>
-
-    <a href="#contact" class="btn btn-primary">Hire Us →</a>
-
-  </div>
+<nav class="nav-links">
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#process">Process</a>
+<a href="#about">About</a>
+<a href="#contact" class="nav-btn">Start a Project</a>
 </nav>
 
+</div>
+</header>
+
+
+<main>
 
 <!-- HERO -->
-<section class="hero" id="home">
 
-  <div class="container">
+<section class="hero">
+<div class="container">
 
-    <div class="hero-content">
+<div class="badge">CREATIVE EDITING AGENCY • INDIA</div>
 
-      <span class="badge">PREMIUM VIDEO EDITING AGENCY</span>
+<h1>
+We turn ideas into
+<span>content that moves.</span>
+</h1>
 
-      <h1>
-        Editing That
-        <span class="gradient-text">Tells Stories.</span>
-      </h1>
+<p>
+VelnoxMedia is a professional creative editing agency helping
+brands, creators and businesses turn raw footage into
+high-impact digital content.
+</p>
 
-      <p>
-        VelnoxMedia connects creators and businesses with skilled
-        video editors to create engaging, high-quality content that
-        gets attention.
-      </p>
+<div class="buttons">
+<a href="#contact" class="btn btn-primary">Start a Project →</a>
+<a href="#work" class="btn btn-secondary">View Our Work</a>
+</div>
 
-      <div class="hero-buttons">
-        <a href="#work" class="btn btn-primary">
-          View Our Work →
-        </a>
-
-        <a href="#contact" class="btn">
-          Hire Us
-        </a>
-      </div>
-
-    </div>
-
-    <div class="hero-visual">
-
-      <div class="monitor">
-
-        <div class="screen">
-
-          <div class="timeline">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 
 <!-- STATS -->
+
 <div class="stats">
+<div class="container stats-grid">
 
-  <div class="container">
+<div class="stat">
+<h3>90+</h3>
+<p>Creative Editors</p>
+</div>
 
-    <div class="stats-box">
+<div class="stat">
+<h3>24/7</h3>
+<p>Creative Support</p>
+</div>
 
-      <div class="stat">
-        <h3>90+</h3>
-        <p>Skilled Editors</p>
-      </div>
+<div class="stat">
+<h3>4+</h3>
+<p>Content Categories</p>
+</div>
 
-      <div class="stat">
-        <h3>500+</h3>
-        <p>Projects Target</p>
-      </div>
+<div class="stat">
+<h3>100%</h3>
+<p>Agency Managed</p>
+</div>
 
-      <div class="stat">
-        <h3>24-48h</h3>
-        <p>Fast Turnaround</p>
-      </div>
-
-      <div class="stat">
-        <h3>24/7</h3>
-        <p>Creative Support</p>
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
 </div>
 
 
 <!-- SERVICES -->
+
 <section id="services">
+<div class="container">
 
-  <div class="container">
+<div class="section-label">What we do</div>
 
-    <div class="section-label">OUR SERVICES</div>
+<h2 class="section-title">
+Creative services built<br>
+for modern brands.
+</h2>
 
-    <h2 class="section-title">
-      What We Can Do For You
-    </h2>
+<div class="services">
 
-    <p class="section-subtitle">
-      From short-form content to long-form storytelling,
-      our editing network can handle different content styles.
-    </p>
+<div class="service">
+<span class="service-number">01 / SHORT FORM</span>
+<h3>Reels & Shorts</h3>
+<p>
+High-retention Instagram Reels, YouTube Shorts and
+vertical content designed for modern audiences.
+</p>
+</div>
 
+<div class="service">
+<span class="service-number">02 / LONG FORM</span>
+<h3>YouTube Editing</h3>
+<p>
+Professional long-form editing with storytelling,
+pacing, motion graphics and engaging visual structure.
+</p>
+</div>
 
-    <div class="services-grid">
+<div class="service">
+<span class="service-number">03 / SOCIAL MEDIA</span>
+<h3>Social Content</h3>
+<p>
+Consistent content systems for creators, brands,
+agencies and growing social media accounts.
+</p>
+</div>
 
-      <div class="card">
-        <div class="icon">▶</div>
-        <h3>YouTube Editing</h3>
-        <p>
-          Long-form videos, documentaries, podcasts,
-          educational content and more.
-        </p>
-      </div>
+<div class="service">
+<span class="service-number">04 / COMMERCIAL</span>
+<h3>Brand & Ads</h3>
+<p>
+Premium video editing for advertisements, campaigns,
+product launches and brand storytelling.
+</p>
+</div>
 
-      <div class="card">
-        <div class="icon">▣</div>
-        <h3>Shorts & Reels</h3>
-        <p>
-          Fast-paced Instagram Reels, YouTube Shorts
-          and TikTok content.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">●</div>
-        <h3>Podcast Editing</h3>
-        <p>
-          Clean cuts, captions, highlights and engaging
-          social-media clips.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">◆</div>
-        <h3>Ads & Commercials</h3>
-        <p>
-          Attention-grabbing video ads designed
-          for brands and businesses.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">✦</div>
-        <h3>Motion Graphics</h3>
-        <p>
-          Animations, transitions, visual effects
-          and motion design.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">▧</div>
-        <h3>Thumbnails & Designs</h3>
-        <p>
-          Eye-catching thumbnails and creative
-          visual assets for your content.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 
 <!-- WORK -->
+
 <section id="work">
+<div class="container">
 
-  <div class="container">
+<div class="section-label">Selected work</div>
 
-    <div class="section-label">OUR WORK</div>
+<h2 class="section-title">
+A glimpse of our<br>
+creative direction.
+</h2>
 
-    <h2 class="section-title">
-      Selected Projects
-    </h2>
+<div class="portfolio">
 
-    <p class="section-subtitle">
-      Replace these demo projects with your real editing portfolio.
-    </p>
+<!-- Replace these cards with your actual projects -->
 
+<div class="work">
+<div class="work-content">
+<small>SHORT FORM</small>
+<h3>Social Media Campaign</h3>
+</div>
+</div>
 
-    <div class="work-grid">
+<div class="work">
+<div class="work-content">
+<small>CREATOR CONTENT</small>
+<h3>High Retention Reels</h3>
+</div>
+</div>
 
-      <div class="work-card">
-        <div class="work-image">YOUTUBE</div>
-        <div class="work-info">
-          <h3>YouTube Long-form</h3>
-          <p>Storytelling • Retention • Editing</p>
-        </div>
-      </div>
+<div class="work">
+<div class="work-content">
+<small>YOUTUBE</small>
+<h3>Long Form Storytelling</h3>
+</div>
+</div>
 
-      <div class="work-card">
-        <div class="work-image">SHORTS</div>
-        <div class="work-info">
-          <h3>Short-form Content</h3>
-          <p>Reels • Shorts • TikTok</p>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-image">ADS</div>
-        <div class="work-info">
-          <h3>Brand Advertisement</h3>
-          <p>Commercial • Product • Social Ads</p>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-image">PODCAST</div>
-        <div class="work-info">
-          <h3>Podcast Content</h3>
-          <p>Clips • Captions • Highlights</p>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-image">MOTION</div>
-        <div class="work-info">
-          <h3>Motion Graphics</h3>
-          <p>Animation • VFX • Transitions</p>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-image">CREATIVE</div>
-        <div class="work-info">
-          <h3>Creative Editing</h3>
-          <p>Story • Visuals • Sound Design</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- EDITORS -->
-<section class="editors" id="editors">
-
-  <div class="container">
-
-    <div class="section-label">OUR EDITORS</div>
-
-    <h2 class="section-title">
-      Meet Our Editing Network
-    </h2>
-
-    <p class="section-subtitle">
-      A growing network of talented editors with different
-      skills, styles and specialties.
-    </p>
-
-
-    <div class="editor-grid">
-
-      <div class="editor">
-        <div class="avatar">E1</div>
-        <h3>Editor Profile</h3>
-        <p>Video Editor</p>
-        <div class="tags">
-          <span class="tag">Premiere Pro</span>
-          <span class="tag">YouTube</span>
-        </div>
-      </div>
-
-      <div class="editor">
-        <div class="avatar">E2</div>
-        <h3>Editor Profile</h3>
-        <p>Short-form Editor</p>
-        <div class="tags">
-          <span class="tag">Reels</span>
-          <span class="tag">CapCut</span>
-        </div>
-      </div>
-
-      <div class="editor">
-        <div class="avatar">E3</div>
-        <h3>Editor Profile</h3>
-        <p>Motion Designer</p>
-        <div class="tags">
-          <span class="tag">After Effects</span>
-          <span class="tag">VFX</span>
-        </div>
-      </div>
-
-      <div class="editor">
-        <div class="avatar">E4</div>
-        <h3>Editor Profile</h3>
-        <p>Content Editor</p>
-        <div class="tags">
-          <span class="tag">YouTube</span>
-          <span class="tag">Storytelling</span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- WHY US -->
-<section id="why">
-
-  <div class="container why-grid">
-
-    <div>
-
-      <div class="section-label">WHY VELNOXMEDIA?</div>
-
-      <h2 class="section-title">
-        One Agency.<br>
-        Multiple Editing Skills.
-      </h2>
-
-      <p class="section-subtitle">
-        Instead of searching for a different editor for every
-        project, work with one agency and access a network
-        of specialized editors.
-      </p>
-
-    </div>
-
-
-    <div class="check-list">
-
-      <div class="check">
-        <b>✓</b>
-        <span>Growing network of skilled editors</span>
-      </div>
-
-      <div class="check">
-        <b>✓</b>
-        <span>Different editing styles and niches</span>
-      </div>
-
-      <div class="check">
-        <b>✓</b>
-        <span>Fast project matching</span>
-      </div>
-
-      <div class="check">
-        <b>✓</b>
-        <span>Flexible project requirements</span>
-      </div>
-
-      <div class="check">
-        <b>✓</b>
-        <span>Dedicated communication</span>
-      </div>
-
-      <div class="check">
-        <b>✓</b>
-        <span>Quality-focused workflow</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT CTA -->
-<div class="cta" id="contact">
-
-  <h2>Ready to Scale Your Content?</h2>
-
-  <p>
-    Tell us what you need and we'll help you find
-    the right editing solution.
-  </p>
-
-  <a
-    href="mailto:hello@velnoxmedia.com?subject=Project%20Inquiry"
-    class="btn"
-  >
-    Start a Project →
-  </a>
+<div class="work">
+<div class="work-content">
+<small>BRAND</small>
+<h3>Commercial Campaign</h3>
+</div>
+</div>
 
 </div>
 
+</div>
+</section>
+
+
+<!-- NETWORK -->
+
+<section>
+<div class="container">
+
+<div class="network">
+
+<div class="network-grid">
+
+<div>
+
+<div class="section-label">Our creative network</div>
+
+<h2>
+A creative team<br>
+behind every project.
+</h2>
+
+<p>
+VelnoxMedia works with a growing network of skilled
+creative professionals. Every project is managed
+directly by VelnoxMedia to maintain quality,
+consistency and reliable delivery.
+</p>
+
+</div>
+
+<div class="network-list">
+
+<div class="network-item">
+<strong>Creative Editors</strong>
+<span>Specialists across multiple editing styles</span>
+</div>
+
+<div class="network-item">
+<strong>Agency Managed</strong>
+<span>One professional point of contact for clients</span>
+</div>
+
+<div class="network-item">
+<strong>Quality Control</strong>
+<span>Projects reviewed before client delivery</span>
+</div>
+
+<div class="network-item">
+<strong>Scalable Production</strong>
+<span>Capacity for growing content requirements</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="process">
+<div class="container">
+
+<div class="section-label">How it works</div>
+
+<h2 class="section-title">
+Simple for the client.<br>
+Powerful behind the scenes.
+</h2>
+
+<div class="process">
+
+<div class="step">
+<span class="step-number">01</span>
+<h3>Brief</h3>
+<p>
+You tell us about your content, goals and requirements.
+</p>
+</div>
+
+<div class="step">
+<span class="step-number">02</span>
+<h3>Planning</h3>
+<p>
+Our team reviews the project and assigns the right
+creative resources.
+</p>
+</div>
+
+<div class="step">
+<span class="step-number">03</span>
+<h3>Production</h3>
+<p>
+The project moves through our managed editing workflow.
+</p>
+</div>
+
+<div class="step">
+<span class="step-number">04</span>
+<h3>Delivery</h3>
+<p>
+Final content is reviewed and delivered professionally.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container">
+
+<div class="about">
+
+<div>
+<div class="section-label">About VelnoxMedia</div>
+
+<h2>
+More than an editor.<br>
+A creative partner.
+</h2>
+</div>
+
+<div>
+
+<p>
+VelnoxMedia was built to make professional video
+production simpler for creators, brands and businesses.
+</p>
+
+<p>
+Instead of clients having to search for and manage
+individual freelancers, VelnoxMedia provides one
+professional agency experience from brief to delivery.
+</p>
+
+<p>
+Our goal is simple: combine creative talent,
+professional management and consistent quality
+to help brands produce better content at scale.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+<div class="container">
+
+<div class="cta">
+
+<div class="section-label">Let's work together</div>
+
+<h2>
+Have a project<br>
+in mind?
+</h2>
+
+<p>
+Tell us what you're building. Our team will get back
+to you with the next steps.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a
+href="mailto:velnoxmediaofficial@gmail.com?subject=VelnoxMedia%20Project%20Inquiry"
+class="btn btn-primary">
+Email VelnoxMedia →
+</a>
+
+<a
+href="https://instagram.com/velnoxmedia"
+target="_blank"
+class="btn btn-secondary">
+Instagram @velnoxmedia
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
 
 <!-- FOOTER -->
+
 <footer>
+<div class="container footer-grid">
 
-  <div class="container footer-grid">
+<div class="footer-left">
 
-    <div>
+<strong>VelnoxMedia</strong>
 
-      <div class="footer-logo">
-        VelnoxMedia
-      </div>
+<p>
+Creative Editing Agency
+</p>
 
-      <p>
-        Premium video editing solutions for creators,
-        brands and businesses.
-      </p>
+<p>
+© 2026 VelnoxMedia. All rights reserved.
+</p>
 
-    </div>
+</div>
 
+<div class="footer-links">
 
-    <div>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#about">About</a>
 
-      <h4>Company</h4>
+<a
+href="https://instagram.com/velnoxmedia"
+target="_blank">
+Instagram
+</a>
 
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#work">Our Work</a>
-      <a href="#editors">Editors</a>
+<a href="mailto:velnoxmediaofficial@gmail.com">
+Email
+</a>
 
-    </div>
+</div>
 
-
-    <div>
-
-      <h4>Services</h4>
-
-      <a href="#services">YouTube Editing</a>
-      <a href="#services">Shorts & Reels</a>
-      <a href="#services">Podcast Editing</a>
-      <a href="#services">Motion Graphics</a>
-
-    </div>
-
-
-    <div>
-
-      <h4>Contact</h4>
-
-      <a href="#contact">Start a Project</a>
-      <a href="mailto:hello@velnoxmedia.com">
-        Email Us
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="container copyright">
-    © 2026 VelnoxMedia. All rights reserved.
-  </div>
-
+</div>
 </footer>
-
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-  link.addEventListener("click", function(e){
-
-    const target = document.querySelector(this.getAttribute("href"));
-
-    if(target){
-      e.preventDefault();
-
-      target.scrollIntoView({
-        behavior:"smooth"
-      });
-    }
-
-  });
-
-});
-</script>
 
 </body>
   </html>
