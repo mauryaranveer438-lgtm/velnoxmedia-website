@@ -6,8 +6,7 @@
 
 <title>VelnoxMedia | Creative Editing Agency</title>
 
-<meta name="description"
-content="VelnoxMedia is a professional creative editing agency for creators, brands and businesses.">
+<meta name="description" content="VelnoxMedia is a professional creative editing agency for creators, brands and businesses.">
 
 <style>
 *{
@@ -45,7 +44,7 @@ header{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(5,9,18,.88);
+    background:rgba(5,9,18,.92);
     backdrop-filter:blur(18px);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
@@ -61,7 +60,6 @@ header{
 .logo{
     font-size:25px;
     font-weight:800;
-    letter-spacing:-1px;
 }
 
 .logo span{
@@ -71,13 +69,12 @@ header{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:24px;
 }
 
 .nav-links a{
     color:#9ba7b8;
     font-size:14px;
-    transition:.25s;
 }
 
 .nav-links a:hover{
@@ -113,19 +110,6 @@ header{
     filter:blur(120px);
     right:-180px;
     top:80px;
-}
-
-.hero:after{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    border-radius:50%;
-    background:#5d3bff;
-    opacity:.08;
-    filter:blur(120px);
-    left:-180px;
-    bottom:-100px;
 }
 
 .hero-content{
@@ -181,7 +165,6 @@ header{
 .btn-primary{
     background:#147cff;
     color:#fff;
-    box-shadow:0 10px 35px rgba(20,124,255,.25);
 }
 
 .btn-primary:hover{
@@ -289,13 +272,30 @@ section{
     font-weight:700;
 }
 
-/* PORTFOLIO FILTERS */
+/* PORTFOLIO */
+
+.portfolio-heading{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.category-status{
+    color:#6e7e93;
+    font-size:14px;
+    margin-bottom:45px;
+}
+
+.category-status strong{
+    color:#4da3ff;
+}
 
 .filters{
     display:flex;
     gap:10px;
     flex-wrap:wrap;
-    margin-bottom:35px;
+    margin-bottom:18px;
 }
 
 .filter-btn{
@@ -306,6 +306,7 @@ section{
     border-radius:30px;
     cursor:pointer;
     font-size:13px;
+    transition:.25s;
 }
 
 .filter-btn.active,
@@ -334,6 +335,10 @@ section{
 .video-card:hover{
     transform:translateY(-5px);
     border-color:rgba(77,163,255,.4);
+}
+
+.video-card.hidden{
+    display:none;
 }
 
 .video-wrapper{
@@ -378,9 +383,7 @@ section{
     border:1px solid rgba(255,255,255,.09);
     border-radius:24px;
     padding:55px;
-    background:
-      radial-gradient(circle at 90% 10%,rgba(20,124,255,.14),transparent 30%),
-      #08111e;
+    background:#08111e;
 }
 
 .network-grid{
@@ -477,9 +480,7 @@ section{
     padding:90px 30px;
     border:1px solid rgba(77,163,255,.18);
     border-radius:25px;
-    background:
-      radial-gradient(circle at 50% 0,rgba(20,124,255,.18),transparent 40%),
-      #08111e;
+    background:#08111e;
 }
 
 .contact-box h2{
@@ -494,14 +495,35 @@ section{
     margin:25px auto 35px;
 }
 
-.contact-info{
-    margin-top:30px;
-    color:#7c899b;
-    font-size:14px;
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
-.contact-info a{
-    color:#62aeff;
+.contact-info{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.contact-item{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 16px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:30px;
+    color:#9aa7b8;
+    font-size:13px;
+}
+
+.contact-item:hover{
+    border-color:#147cff;
+    color:#fff;
 }
 
 /* FOOTER */
@@ -566,6 +588,10 @@ footer{
     section{
         padding:80px 0;
     }
+
+    .portfolio-heading{
+        display:block;
+    }
 }
 
 @media(max-width:520px){
@@ -588,6 +614,10 @@ footer{
 
     .footer-grid{
         flex-direction:column;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
     }
 }
 </style>
@@ -763,57 +793,65 @@ podcast and creative video production.
 Selected Work
 </div>
 
+<div class="portfolio-heading">
+
 <h2 class="section-title">
 Our creative<br>
 portfolio.
 </h2>
 
+</div>
+
 <div class="filters">
 
-<button class="filter-btn active" onclick="filterVideos('all',this)">
+<button class="filter-btn active" data-filter="all">
 All
 </button>
 
-<button class="filter-btn" onclick="filterVideos('motion',this)">
+<button class="filter-btn" data-filter="motion">
 Motion Graphics
 </button>
 
-<button class="filter-btn" onclick="filterVideos('documentary',this)">
+<button class="filter-btn" data-filter="documentary">
 Documentary
 </button>
 
-<button class="filter-btn" onclick="filterVideos('gaming',this)">
+<button class="filter-btn" data-filter="gaming">
 Gaming
 </button>
 
-<button class="filter-btn" onclick="filterVideos('podcast',this)">
+<button class="filter-btn" data-filter="podcast">
 Podcast
 </button>
 
-<button class="filter-btn" onclick="filterVideos('cinematic',this)">
+<button class="filter-btn" data-filter="cinematic">
 Cinematic
 </button>
 
-<button class="filter-btn" onclick="filterVideos('movie',this)">
+<button class="filter-btn" data-filter="movie">
 Movie Editing
 </button>
 
-<button class="filter-btn" onclick="filterVideos('ads',this)">
+<button class="filter-btn" data-filter="ads">
 Ads & Promotion
 </button>
 
-<button class="filter-btn" onclick="filterVideos('automotive',this)">
+<button class="filter-btn" data-filter="automotive">
 Bike & Car
 </button>
 
-<button class="filter-btn" onclick="filterVideos('shorts',this)">
+<button class="filter-btn" data-filter="shorts">
 Shorts & Reels
 </button>
 
 </div>
 
+<div class="category-status">
+Showing: <strong id="currentCategory">All Projects</strong>
+</div>
 
-<div class="video-grid">
+
+<div class="video-grid" id="videoGrid">
 
 
 <!-- MOTION GRAPHICS -->
@@ -824,6 +862,7 @@ Shorts & Reels
 <iframe
 src="https://www.youtube.com/embed/4l1v43RU7B4"
 title="Motion Graphics Project 01"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
 </div>
@@ -837,12 +876,15 @@ allowfullscreen>
 </div>
 
 
+<!-- NEW MOTION VIDEO -->
+
 <div class="video-card" data-category="motion">
 
 <div class="video-wrapper">
 <iframe
-src="https://www.youtube.com/embed/ytbTfJsS8OQ"
+src="https://www.youtube.com/embed/MZYwsIaQnMk"
 title="Motion Graphics Project 02"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
 </div>
@@ -856,12 +898,15 @@ allowfullscreen>
 </div>
 
 
+<!-- NEW MOTION VIDEO -->
+
 <div class="video-card" data-category="motion">
 
 <div class="video-wrapper">
 <iframe
-src="https://www.youtube.com/embed/ElzqICbPDEQ"
+src="https://www.youtube.com/embed/hd_ZHT-4YLQ"
 title="Motion Graphics Project 03"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
 </div>
@@ -1115,7 +1160,7 @@ allowfullscreen>
 </div>
 
 
-<!-- AUTOMOTIVE -->
+<!-- BIKE & CAR -->
 
 <div class="video-card" data-category="automotive">
 
@@ -1155,7 +1200,7 @@ allowfullscreen>
 </div>
 
 
-<!-- SHORTS -->
+<!-- SHORTS & REELS -->
 
 <div class="video-card" data-category="shorts">
 
@@ -1187,51 +1232,4 @@ allowfullscreen>
 </div>
 
 <div class="video-info">
-<span class="video-category">Shorts & Reels</span>
-<h3>Shorts & Reels — Project 02</h3>
-<p>Short-form social media editing.</p>
-</div>
-
-</div>
-
-
-</div>
-</div>
-</section>
-
-
-<!-- NETWORK -->
-
-<section>
-
-<div class="container">
-
-<div class="network">
-
-<div class="network-grid">
-
-<div>
-
-<div class="section-label">
-Creative Network
-</div>
-
-<h2>
-One agency.<br>
-A powerful creative network.
-</h2>
-
-<p>
-VelnoxMedia works with a growing network of creative
-professionals across different editing styles and
-content categories.
-</p>
-
-</div>
-
-<div class="network-list">
-
-<div class="network-item">
-<strong>90+ Creative Editors</strong>
-<span>
-A growing network of skilled editing professi
+<span class="video-category">Short
