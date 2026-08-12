@@ -7,7 +7,7 @@
 <title>VelnoxMedia | Creative Editing Agency</title>
 
 <meta name="description"
-content="VelnoxMedia is a professional video editing agency for creators, brands and businesses.">
+content="VelnoxMedia is a professional creative editing agency for creators, brands and businesses.">
 
 <style>
 *{
@@ -44,21 +44,22 @@ header{
     top:0;
     left:0;
     width:100%;
-    z-index:999;
-    background:rgba(5,9,18,.82);
+    z-index:1000;
+    background:rgba(5,9,18,.88);
     backdrop-filter:blur(18px);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav{
-    height:76px;
+    min-height:76px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:20px;
 }
 
 .logo{
-    font-size:24px;
+    font-size:25px;
     font-weight:800;
     letter-spacing:-1px;
 }
@@ -70,7 +71,7 @@ header{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:25px;
 }
 
 .nav-links a{
@@ -108,7 +109,7 @@ header{
     height:550px;
     border-radius:50%;
     background:#147cff;
-    opacity:.10;
+    opacity:.11;
     filter:blur(120px);
     right:-180px;
     top:80px;
@@ -117,8 +118,8 @@ header{
 .hero:after{
     content:"";
     position:absolute;
-    width:400px;
-    height:400px;
+    width:420px;
+    height:420px;
     border-radius:50%;
     background:#5d3bff;
     opacity:.08;
@@ -145,8 +146,8 @@ header{
 }
 
 .hero h1{
-    max-width:950px;
-    font-size:clamp(50px,8vw,100px);
+    max-width:1000px;
+    font-size:clamp(52px,8vw,100px);
     line-height:.95;
     letter-spacing:-6px;
 }
@@ -217,7 +218,6 @@ header{
 
 .stat h3{
     font-size:38px;
-    color:#fff;
 }
 
 .stat p{
@@ -243,7 +243,7 @@ section{
     font-size:clamp(38px,6vw,68px);
     line-height:1;
     letter-spacing:-3px;
-    margin-bottom:55px;
+    margin-bottom:45px;
 }
 
 /* SERVICES */
@@ -289,54 +289,87 @@ section{
     font-weight:700;
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO FILTERS */
 
-.portfolio{
+.filters{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.filter-btn{
+    border:1px solid rgba(255,255,255,.12);
+    background:#08111e;
+    color:#8c9aac;
+    padding:10px 16px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:#147cff;
+    color:#fff;
+    border-color:#147cff;
+}
+
+/* VIDEO GRID */
+
+.video-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    gap:22px;
 }
 
-.work{
-    min-height:330px;
-    border-radius:18px;
+.video-card{
+    background:#08111e;
     border:1px solid rgba(255,255,255,.09);
-    background:
-      radial-gradient(circle at 80% 20%,rgba(20,124,255,.20),transparent 35%),
-      linear-gradient(145deg,#101b2c,#070c14);
-    position:relative;
+    border-radius:18px;
     overflow:hidden;
+    transition:.3s;
 }
 
-.work-number{
+.video-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(77,163,255,.4);
+}
+
+.video-wrapper{
+    position:relative;
+    width:100%;
+    aspect-ratio:9/16;
+    background:#02050a;
+}
+
+.video-wrapper iframe{
     position:absolute;
-    top:25px;
-    right:25px;
-    color:#52657c;
-    font-size:12px;
+    width:100%;
+    height:100%;
+    border:0;
 }
 
-.work-content{
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    padding:30px;
-    background:linear-gradient(transparent,rgba(2,5,10,.98));
+.video-info{
+    padding:20px;
 }
 
-.work-content small{
-    color:#5eaeff;
+.video-category{
+    color:#4da3ff;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.work-content h3{
-    font-size:26px;
-    margin-top:5px;
+.video-info h3{
+    margin-top:7px;
+    font-size:20px;
 }
 
-.work-content p{
-    color:#8491a2;
+.video-info p{
+    color:#748297;
     font-size:13px;
+    margin-top:5px;
 }
 
 /* NETWORK */
@@ -516,7 +549,7 @@ footer{
     }
 
     .services,
-    .portfolio,
+    .video-grid,
     .network-grid,
     .about{
         grid-template-columns:1fr;
@@ -553,10 +586,6 @@ footer{
         padding:25px;
     }
 
-    .work{
-        min-height:280px;
-    }
-
     .footer-grid{
         flex-direction:column;
     }
@@ -566,8 +595,6 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
-
 <header>
 <div class="container nav">
 
@@ -576,19 +603,20 @@ Velnox<span>Media</span>
 </a>
 
 <nav class="nav-links">
+
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
 <a href="#process">Process</a>
 <a href="#about">About</a>
 
 <a
-href="https://forms.gle/Ei8R9kzJPsuCLctRA"
+href="https://forms.gle/91r3n3MHn2onbqbX8"
 target="_blank"
 class="nav-cta">
 Start a Project
 </a>
-</nav>
 
+</nav>
 </div>
 </header>
 
@@ -617,15 +645,13 @@ into powerful digital content.
 <div class="buttons">
 
 <a
-href="https://forms.gle/Ei8R9kzJPsuCLctRA"
+href="https://forms.gle/91r3n3MHn2onbqbX8"
 target="_blank"
 class="btn btn-primary">
 Start a Project →
 </a>
 
-<a
-href="#portfolio"
-class="btn btn-secondary">
+<a href="#portfolio" class="btn btn-secondary">
 View Our Work
 </a>
 
@@ -647,13 +673,13 @@ View Our Work
 </div>
 
 <div class="stat">
-<h3>24/7</h3>
-<p>Agency Support</p>
+<h3>19</h3>
+<p>Portfolio Projects</p>
 </div>
 
 <div class="stat">
-<h3>5+</h3>
-<p>Creative Services</p>
+<h3>9+</h3>
+<p>Creative Categories</p>
 </div>
 
 <div class="stat">
@@ -682,86 +708,45 @@ content format.
 
 <div class="services">
 
-
 <a href="#portfolio" class="service">
-
-<span class="service-number">
-01 / VIDEO
-</span>
-
+<span class="service-number">01 / VIDEO</span>
 <h3>YouTube Editing</h3>
-
 <p>
-Long-form YouTube videos with professional
-storytelling, pacing, sound design and motion graphics.
+Long-form YouTube videos with professional storytelling,
+pacing, sound design and motion graphics.
 </p>
-
-<span class="service-link">
-View Portfolio →
-</span>
-
+<span class="service-link">View Portfolio →</span>
 </a>
 
-
 <a href="#portfolio" class="service">
-
-<span class="service-number">
-02 / SHORT FORM
-</span>
-
+<span class="service-number">02 / SHORT FORM</span>
 <h3>Shorts & Reels</h3>
-
 <p>
 High-retention Instagram Reels and YouTube Shorts
-designed for modern social media audiences.
+designed for modern audiences.
 </p>
-
-<span class="service-link">
-View Portfolio →
-</span>
-
+<span class="service-link">View Portfolio →</span>
 </a>
-
 
 <a href="#portfolio" class="service">
-
-<span class="service-number">
-03 / BRAND
-</span>
-
-<h3>Ads & Commercials</h3>
-
+<span class="service-number">03 / BRAND</span>
+<h3>Ads & Promotion</h3>
 <p>
-Professional video editing for brands, campaigns,
-product launches and advertisements.
+Professional editing for brands, campaigns,
+product launches and promotional content.
 </p>
-
-<span class="service-link">
-View Portfolio →
-</span>
-
+<span class="service-link">View Portfolio →</span>
 </a>
-
 
 <a href="#portfolio" class="service">
-
-<span class="service-number">
-04 / DESIGN
-</span>
-
-<h3>Thumbnails & Graphics</h3>
-
+<span class="service-number">04 / CREATIVE</span>
+<h3>Motion & Visuals</h3>
 <p>
-Attention-grabbing thumbnails, social graphics and
-visual assets for digital creators and businesses.
+Motion graphics, cinematic edits, gaming,
+podcast and creative video production.
 </p>
-
-<span class="service-link">
-View Portfolio →
-</span>
-
+<span class="service-link">View Portfolio →</span>
 </a>
-
 
 </div>
 </div>
@@ -783,107 +768,434 @@ Our creative<br>
 portfolio.
 </h2>
 
-<div class="portfolio">
+<div class="filters">
 
+<button class="filter-btn active" onclick="filterVideos('all',this)">
+All
+</button>
 
-<div class="work">
+<button class="filter-btn" onclick="filterVideos('motion',this)">
+Motion Graphics
+</button>
 
-<div class="work-number">
-01
-</div>
+<button class="filter-btn" onclick="filterVideos('documentary',this)">
+Documentary
+</button>
 
-<div class="work-content">
+<button class="filter-btn" onclick="filterVideos('gaming',this)">
+Gaming
+</button>
 
-<small>
-SHORT FORM
-</small>
+<button class="filter-btn" onclick="filterVideos('podcast',this)">
+Podcast
+</button>
 
-<h3>
-Reels & Shorts
-</h3>
+<button class="filter-btn" onclick="filterVideos('cinematic',this)">
+Cinematic
+</button>
 
-<p>
-Selected short-form editing work.
-</p>
+<button class="filter-btn" onclick="filterVideos('movie',this)">
+Movie Editing
+</button>
 
-</div>
-</div>
+<button class="filter-btn" onclick="filterVideos('ads',this)">
+Ads & Promotion
+</button>
 
+<button class="filter-btn" onclick="filterVideos('automotive',this)">
+Bike & Car
+</button>
 
-<div class="work">
-
-<div class="work-number">
-02
-</div>
-
-<div class="work-content">
-
-<small>
-YOUTUBE
-</small>
-
-<h3>
-Long Form Content
-</h3>
-
-<p>
-Professional YouTube editing showcase.
-</p>
-
-</div>
-</div>
-
-
-<div class="work">
-
-<div class="work-number">
-03
-</div>
-
-<div class="work-content">
-
-<small>
-BRAND
-</small>
-
-<h3>
-Commercial Videos
-</h3>
-
-<p>
-Brand and advertising projects.
-</p>
-
-</div>
-</div>
-
-
-<div class="work">
-
-<div class="work-number">
-04
-</div>
-
-<div class="work-content">
-
-<small>
-SOCIAL MEDIA
-</small>
-
-<h3>
-Creator Content
-</h3>
-
-<p>
-Content created for social platforms.
-</p>
-
-</div>
-</div>
-
+<button class="filter-btn" onclick="filterVideos('shorts',this)">
+Shorts & Reels
+</button>
 
 </div>
 
+
+<div class="video-grid">
+
+
+<!-- MOTION GRAPHICS -->
+
+<div class="video-card" data-category="motion">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/4l1v43RU7B4"
+title="Motion Graphics Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Motion Graphics</span>
+<h3>Motion Graphics — Project 01</h3>
+<p>Creative motion graphics editing.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="motion">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/ytbTfJsS8OQ"
+title="Motion Graphics Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Motion Graphics</span>
+<h3>Motion Graphics — Project 02</h3>
+<p>Creative motion graphics editing.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="motion">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/ElzqICbPDEQ"
+title="Motion Graphics Project 03"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Motion Graphics</span>
+<h3>Motion Graphics — Project 03</h3>
+<p>Creative motion graphics editing.</p>
+</div>
+
+</div>
+
+
+<!-- DOCUMENTARY -->
+
+<div class="video-card" data-category="documentary">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/EQPrKuu_JXA"
+title="Documentary Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Documentary</span>
+<h3>Documentary — Project 01</h3>
+<p>Documentary storytelling edit.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="documentary">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/RHsEqVdaswc"
+title="Documentary Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Documentary</span>
+<h3>Documentary — Project 02</h3>
+<p>Documentary storytelling edit.</p>
+</div>
+
+</div>
+
+
+<!-- GAMING -->
+
+<div class="video-card" data-category="gaming">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/u_wCj_XhlhQ"
+title="Gaming Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Gaming</span>
+<h3>Gaming Edit — Project 01</h3>
+<p>Dynamic gaming content.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="gaming">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/D1sYUMMfS4U"
+title="Gaming Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Gaming</span>
+<h3>Gaming Edit — Project 02</h3>
+<p>Dynamic gaming content.</p>
+</div>
+
+</div>
+
+
+<!-- PODCAST -->
+
+<div class="video-card" data-category="podcast">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/rTYDTnyshIE"
+title="Podcast Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Podcast</span>
+<h3>Podcast Edit — Project 01</h3>
+<p>Professional podcast editing.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="podcast">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/GhrOFvtcvJk"
+title="Podcast Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Podcast</span>
+<h3>Podcast Edit — Project 02</h3>
+<p>Professional podcast editing.</p>
+</div>
+
+</div>
+
+
+<!-- CINEMATIC -->
+
+<div class="video-card" data-category="cinematic">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/DyiVvZdxw-c"
+title="Cinematic Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Cinematic</span>
+<h3>Cinematic Edit — Project 01</h3>
+<p>Cinematic visual storytelling.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="cinematic">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/wu7RRdQuwDc"
+title="Cinematic Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Cinematic</span>
+<h3>Cinematic Edit — Project 02</h3>
+<p>Cinematic visual storytelling.</p>
+</div>
+
+</div>
+
+
+<!-- MOVIE -->
+
+<div class="video-card" data-category="movie">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/mrZtLu0NrIg"
+title="Movie Editing Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Movie Editing</span>
+<h3>Movie Edit — Project 01</h3>
+<p>Creative movie editing showcase.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="movie">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/JTqwDLFXyZk"
+title="Movie Editing Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Movie Editing</span>
+<h3>Movie Edit — Project 02</h3>
+<p>Creative movie editing showcase.</p>
+</div>
+
+</div>
+
+
+<!-- ADS -->
+
+<div class="video-card" data-category="ads">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/hSymK2FGoi0"
+title="Ads Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Ads & Promotion</span>
+<h3>Ad Campaign — Project 01</h3>
+<p>Promotional video editing.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="ads">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/deRpzIxpsAI"
+title="Ads Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Ads & Promotion</span>
+<h3>Ad Campaign — Project 02</h3>
+<p>Promotional video editing.</p>
+</div>
+
+</div>
+
+
+<!-- AUTOMOTIVE -->
+
+<div class="video-card" data-category="automotive">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/RuI4QS8hGjo"
+title="Bike Car Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Bike & Car</span>
+<h3>Automotive Edit — Project 01</h3>
+<p>Automotive cinematic editing.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="automotive">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/nx4EV9-caNk"
+title="Bike Car Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Bike & Car</span>
+<h3>Automotive Edit — Project 02</h3>
+<p>Automotive cinematic editing.</p>
+</div>
+
+</div>
+
+
+<!-- SHORTS -->
+
+<div class="video-card" data-category="shorts">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/p7MQltVJQoQ"
+title="Shorts Reels Project 01"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Shorts & Reels</span>
+<h3>Shorts & Reels — Project 01</h3>
+<p>Short-form social media editing.</p>
+</div>
+
+</div>
+
+
+<div class="video-card" data-category="shorts">
+
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/4xUp09tGwPg"
+title="Shorts Reels Project 02"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="video-info">
+<span class="video-category">Shorts & Reels</span>
+<h3>Shorts & Reels — Project 02</h3>
+<p>Short-form social media editing.</p>
+</div>
+
+</div>
+
+
+</div>
 </div>
 </section>
 
@@ -910,300 +1222,16 @@ A powerful creative network.
 </h2>
 
 <p>
-VelnoxMedia works with a growing network of
-creative professionals across different editing
-styles and content categories.
+VelnoxMedia works with a growing network of creative
+professionals across different editing styles and
+content categories.
 </p>
 
 </div>
-
 
 <div class="network-list">
 
 <div class="network-item">
 <strong>90+ Creative Editors</strong>
 <span>
-A growing network of skilled editing professionals.
-</span>
-</div>
-
-<div class="network-item">
-<strong>Agency Managed</strong>
-<span>
-Clients communicate directly with VelnoxMedia.
-</span>
-</div>
-
-<div class="network-item">
-<strong>Quality Control</strong>
-<span>
-Projects are reviewed before final delivery.
-</span>
-</div>
-
-<div class="network-item">
-<strong>Scalable Production</strong>
-<span>
-Built to handle growing content requirements.
-</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- PROCESS -->
-
-<section id="process">
-
-<div class="container">
-
-<div class="section-label">
-Our Process
-</div>
-
-<h2 class="section-title">
-Simple for the client.<br>
-Professional behind the scenes.
-</h2>
-
-<div class="process">
-
-
-<div class="step">
-
-<span class="step-number">
-01
-</span>
-
-<h3>
-Submit
-</h3>
-
-<p>
-Tell VelnoxMedia about your project through our
-project form.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<span class="step-number">
-02
-</span>
-
-<h3>
-Plan
-</h3>
-
-<p>
-We understand your requirements and plan the
-creative workflow.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<span class="step-number">
-03
-</span>
-
-<h3>
-Create
-</h3>
-
-<p>
-Our creative network works on your project under
-VelnoxMedia management.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<span class="step-number">
-04
-</span>
-
-<h3>
-Deliver
-</h3>
-
-<p>
-Final work is reviewed and professionally delivered
-to the client.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="about">
-
-<div>
-
-<div class="section-label">
-About VelnoxMedia
-</div>
-
-<h2>
-Your content.<br>
-Our creative network.
-</h2>
-
-</div>
-
-
-<div>
-
-<p>
-VelnoxMedia is a creative editing agency built to
-make professional content production simple.
-</p>
-
-<p>
-Instead of clients searching for and managing
-individual freelancers, VelnoxMedia provides one
-professional agency experience from brief to delivery.
-</p>
-
-<p>
-Our goal is to combine creative talent, professional
-management and consistent quality to help brands
-and creators produce better content at scale.
-</p>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<div class="contact-box">
-
-<div class="section-label">
-Start Your Project
-</div>
-
-<h2>
-Let's create<br>
-something great.
-</h2>
-
-<p>
-Have a video editing requirement?
-Submit your project details and our team will
-review your requirements.
-</p>
-
-
-<div class="buttons" style="justify-content:center;">
-
-<a
-href="https://forms.gle/Ei8R9kzJPsuCLctRA"
-target="_blank"
-class="btn btn-primary">
-Submit Your Project →
-</a>
-
-
-<a
-href="https://instagram.com/velnoxmediaofficial"
-target="_blank"
-class="btn btn-secondary">
-Instagram @velnoxmediaofficial
-</a>
-
-</div>
-
-
-<div class="contact-info">
-
-Email:
-<a href="mailto:velnoxmediaofficial@gmail.com">
-velnoxmediaofficial@gmail.com
-</a>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container footer-grid">
-
-<div class="footer-left">
-
-<strong>VelnoxMedia</strong>
-
-<p>
-Professional Creative Editing Agency
-</p>
-
-<p>
-© 2026 VelnoxMedia. All rights reserved.
-</p>
-
-</div>
-
-
-<div class="footer-links">
-
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#process">Process</a>
-<a href="#about">About</a>
-
-<a
-href="https://instagram.com/velnoxmediaofficial"
-target="_blank">
-Instagram
-</a>
-
-<a href="mailto:velnoxmediaofficial@gmail.com">
-Email
-</a>
-
-</div>
-
-</div>
-
-</footer>
-
-</body>
-        </html>
+A growing network of skilled editing professi
