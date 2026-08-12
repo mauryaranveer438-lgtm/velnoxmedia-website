@@ -4,1232 +4,1099 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VelnoxMedia | Creative Editing Agency</title>
+<title>VelnoxMedia | Premium Video Editing Agency</title>
 
-<meta name="description" content="VelnoxMedia is a professional creative editing agency for creators, brands and businesses.">
+<meta name="description" content="VelnoxMedia is a premium video editing agency providing creative editing, motion graphics, documentaries, gaming edits, podcasts, cinematic videos, ads and short-form content.">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#050912;
-    color:#fff;
-    line-height:1.6;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#05070d;
+  color:#fff;
+  line-height:1.6;
 }
 
 a{
-    text-decoration:none;
-    color:inherit;
+  text-decoration:none;
+  color:inherit;
 }
 
 .container{
-    width:min(1180px,92%);
-    margin:auto;
+  width:92%;
+  max-width:1200px;
+  margin:auto;
 }
 
 /* NAVBAR */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(5,9,18,.92);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(5,7,13,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #1b2638;
 }
 
-.nav{
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+.nav-inner{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:800;
+  font-size:30px;
+  font-weight:800;
 }
 
 .logo span{
-    color:#4da3ff;
+  color:#1683ff;
 }
 
 .nav-links{
-    display:flex;
-    align-items:center;
-    gap:24px;
+  display:flex;
+  gap:28px;
+  align-items:center;
 }
 
 .nav-links a{
-    color:#9ba7b8;
-    font-size:14px;
+  color:#b7c1d2;
+  font-weight:600;
 }
 
 .nav-links a:hover{
-    color:#fff;
-}
-
-.nav-cta{
-    padding:11px 18px;
-    border-radius:30px;
-    background:#147cff;
-    color:#fff!important;
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding:140px 0 90px;
-    position:relative;
-    overflow:hidden;
-}
-
-.hero:before{
-    content:"";
-    position:absolute;
-    width:550px;
-    height:550px;
-    border-radius:50%;
-    background:#147cff;
-    opacity:.11;
-    filter:blur(120px);
-    right:-180px;
-    top:80px;
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid rgba(77,163,255,.3);
-    background:rgba(20,124,255,.08);
-    color:#8ec5ff;
-    border-radius:30px;
-    font-size:12px;
-    letter-spacing:1px;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    max-width:1000px;
-    font-size:clamp(52px,8vw,100px);
-    line-height:.95;
-    letter-spacing:-6px;
-}
-
-.hero h1 span{
-    color:#4da3ff;
-}
-
-.hero p{
-    max-width:650px;
-    margin:30px 0;
-    color:#94a0b2;
-    font-size:18px;
-}
-
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
+  color:#1683ff;
 }
 
 .btn{
-    display:inline-block;
-    padding:15px 23px;
-    border-radius:9px;
-    font-size:14px;
-    font-weight:700;
-    transition:.25s;
+  display:inline-block;
+  background:#1683ff;
+  color:white;
+  padding:13px 24px;
+  border-radius:30px;
+  font-weight:700;
+  transition:.25s;
+  border:none;
+  cursor:pointer;
 }
 
-.btn-primary{
-    background:#147cff;
-    color:#fff;
+.btn:hover{
+  transform:translateY(-2px);
+  background:#006ee8;
+  box-shadow:0 10px 30px rgba(22,131,255,.25);
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
+/* HERO */
+.hero{
+  min-height:700px;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 30%,rgba(22,131,255,.18),transparent 35%);
 }
 
-.btn-secondary{
-    border:1px solid rgba(255,255,255,.14);
-    color:#fff;
+.hero-content{
+  max-width:850px;
+  margin:auto;
 }
 
-.btn-secondary:hover{
-    background:#fff;
-    color:#050912;
+.badge{
+  display:inline-block;
+  padding:8px 16px;
+  border:1px solid #26364d;
+  border-radius:30px;
+  color:#8fa2bb;
+  margin-bottom:25px;
 }
 
-/* STATS */
-
-.stats{
-    border-top:1px solid rgba(255,255,255,.08);
-    border-bottom:1px solid rgba(255,255,255,.08);
-    padding:45px 0;
+.hero h1{
+  font-size:clamp(45px,8vw,85px);
+  line-height:1;
+  margin-bottom:25px;
 }
 
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.hero h1 span{
+  color:#1683ff;
 }
 
-.stat{
-    text-align:center;
+.hero p{
+  color:#aeb9ca;
+  font-size:19px;
+  max-width:700px;
+  margin:0 auto 35px;
 }
 
-.stat h3{
-    font-size:38px;
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
-.stat p{
-    color:#667386;
-    font-size:13px;
+.btn-outline{
+  display:inline-block;
+  padding:13px 24px;
+  border:1px solid #34445b;
+  border-radius:30px;
+  color:#dbe4f2;
+  font-weight:700;
+}
+
+.btn-outline:hover{
+  border-color:#1683ff;
+  color:#1683ff;
 }
 
 /* SECTIONS */
-
 section{
-    padding:110px 0;
-}
-
-.section-label{
-    color:#4da3ff;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:11px;
-    margin-bottom:15px;
+  padding:90px 0;
 }
 
 .section-title{
-    font-size:clamp(38px,6vw,68px);
-    line-height:1;
-    letter-spacing:-3px;
-    margin-bottom:45px;
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#8f9bad;
 }
 
 /* SERVICES */
-
 .services{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:16px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .service{
-    padding:35px;
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:18px;
-    background:linear-gradient(145deg,#0b1423,#07101c);
-    transition:.3s;
-}
-
-.service:hover{
-    transform:translateY(-6px);
-    border-color:rgba(77,163,255,.45);
-}
-
-.service-number{
-    color:#4d6a8d;
-    font-size:12px;
+  padding:30px;
+  border:1px solid #1c293b;
+  background:#0a0f18;
+  border-radius:20px;
 }
 
 .service h3{
-    font-size:27px;
-    margin:25px 0 10px;
+  margin:12px 0;
 }
 
 .service p{
-    color:#788598;
-    font-size:14px;
-    margin-bottom:22px;
-}
-
-.service-link{
-    color:#62aeff;
-    font-size:13px;
-    font-weight:700;
+  color:#8995a8;
 }
 
 /* PORTFOLIO */
-
-.portfolio-heading{
-    display:flex;
-    align-items:end;
-    justify-content:space-between;
-    gap:30px;
+.portfolio-section{
+  background:#070a11;
 }
 
-.category-status{
-    color:#6e7e93;
-    font-size:14px;
-    margin-bottom:45px;
+.categories{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
 }
 
-.category-status strong{
-    color:#4da3ff;
+.category{
+  padding:11px 20px;
+  border-radius:30px;
+  border:1px solid #243247;
+  background:#0a101a;
+  color:#9ca9bb;
+  cursor:pointer;
+  font-weight:600;
+  transition:.2s;
 }
 
-.filters{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:18px;
+.category:hover,
+.category.active{
+  background:#1683ff;
+  border-color:#1683ff;
+  color:#fff;
 }
 
-.filter-btn{
-    border:1px solid rgba(255,255,255,.12);
-    background:#08111e;
-    color:#8c9aac;
-    padding:10px 16px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:13px;
-    transition:.25s;
+.showing{
+  color:#929eb0;
+  margin-bottom:25px;
+  font-size:18px;
 }
 
-.filter-btn.active,
-.filter-btn:hover{
-    background:#147cff;
-    color:#fff;
-    border-color:#147cff;
+.showing span{
+  color:#1683ff;
+  font-weight:bold;
 }
 
-/* VIDEO GRID */
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
 }
 
-.video-card{
-    background:#08111e;
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:18px;
-    overflow:hidden;
-    transition:.3s;
+.project{
+  background:#0b1019;
+  border:1px solid #1e2b3d;
+  border-radius:20px;
+  overflow:hidden;
+  transition:.25s;
 }
 
-.video-card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(77,163,255,.4);
+.project:hover{
+  transform:translateY(-5px);
+  border-color:#1683ff;
 }
 
-.video-card.hidden{
-    display:none;
+.project-video{
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  display:block;
 }
 
-.video-wrapper{
-    position:relative;
-    width:100%;
-    aspect-ratio:9/16;
-    background:#02050a;
+.project-info{
+  padding:20px;
 }
 
-.video-wrapper iframe{
-    position:absolute;
-    width:100%;
-    height:100%;
-    border:0;
+.project-info h3{
+  margin-bottom:5px;
 }
 
-.video-info{
-    padding:20px;
+.project-info p{
+  color:#8996a8;
+  font-size:14px;
 }
 
-.video-category{
-    color:#4da3ff;
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:2px;
+/* CTA */
+.cta{
+  text-align:center;
+  background:linear-gradient(180deg,#070a11,#0a111d);
 }
 
-.video-info h3{
-    margin-top:7px;
-    font-size:20px;
+.cta-box{
+  border:1px solid #203049;
+  border-radius:25px;
+  padding:60px 25px;
+  background:#0a101a;
 }
 
-.video-info p{
-    color:#748297;
-    font-size:13px;
-    margin-top:5px;
+.cta-box h2{
+  font-size:40px;
+  margin-bottom:15px;
 }
 
-/* NETWORK */
-
-.network{
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:24px;
-    padding:55px;
-    background:#08111e;
-}
-
-.network-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.network h2{
-    font-size:clamp(36px,5vw,60px);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.network p{
-    color:#7d899a;
-    margin-top:20px;
-}
-
-.network-list{
-    display:grid;
-    gap:14px;
-}
-
-.network-item{
-    padding:20px;
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:12px;
-    background:rgba(255,255,255,.02);
-}
-
-.network-item strong{
-    display:block;
-}
-
-.network-item span{
-    color:#68778a;
-    font-size:13px;
-}
-
-/* PROCESS */
-
-.process{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.step{
-    padding:28px;
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:15px;
-    background:#08111e;
-}
-
-.step-number{
-    color:#4da3ff;
-    font-size:12px;
-}
-
-.step h3{
-    margin:35px 0 10px;
-}
-
-.step p{
-    color:#718094;
-    font-size:13px;
-}
-
-/* ABOUT */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-}
-
-.about h2{
-    font-size:clamp(38px,5vw,60px);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.about p{
-    color:#7c8899;
-    margin-bottom:18px;
+.cta-box p{
+  color:#98a5b7;
+  margin-bottom:30px;
 }
 
 /* CONTACT */
-
-.contact-box{
-    text-align:center;
-    padding:90px 30px;
-    border:1px solid rgba(77,163,255,.18);
-    border-radius:25px;
-    background:#08111e;
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.contact-box h2{
-    font-size:clamp(42px,7vw,82px);
-    line-height:1;
-    letter-spacing:-4px;
+.contact-card{
+  border:1px solid #1c293b;
+  border-radius:20px;
+  padding:28px;
+  text-align:center;
+  background:#0a0f18;
 }
 
-.contact-box p{
-    color:#788598;
-    max-width:560px;
-    margin:25px auto 35px;
+.contact-card .icon{
+  font-size:35px;
+  margin-bottom:12px;
 }
 
-.contact-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
+.contact-card h3{
+  margin-bottom:8px;
 }
 
-.contact-info{
-    margin-top:35px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.contact-item{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:12px 16px;
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:30px;
-    color:#9aa7b8;
-    font-size:13px;
-}
-
-.contact-item:hover{
-    border-color:#147cff;
-    color:#fff;
+.contact-card p{
+  color:#8f9bad;
+  word-break:break-word;
 }
 
 /* FOOTER */
-
 footer{
-    border-top:1px solid rgba(255,255,255,.08);
-    padding:50px 0;
-}
-
-.footer-grid{
-    display:flex;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.footer-left p{
-    color:#627084;
-    font-size:13px;
-    margin-top:7px;
-}
-
-.footer-links{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    color:#718095;
-    font-size:13px;
-}
-
-.footer-links a:hover{
-    color:#fff;
+  border-top:1px solid #172234;
+  padding:30px 0;
+  text-align:center;
+  color:#748196;
 }
 
 /* MOBILE */
-
 @media(max-width:800px){
+  .nav-links{
+    display:none;
+  }
 
-    .nav-links a:not(.nav-cta){
-        display:none;
-    }
+  .nav-inner{
+    min-height:68px;
+  }
 
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:30px 10px;
-    }
+  .logo{
+    font-size:25px;
+  }
 
-    .services,
-    .video-grid,
-    .network-grid,
-    .about{
-        grid-template-columns:1fr;
-    }
+  .hero{
+    min-height:600px;
+  }
 
-    .process{
-        grid-template-columns:1fr 1fr;
-    }
+  .services,
+  .contact-grid,
+  .portfolio-grid{
+    grid-template-columns:1fr;
+  }
 
-    .network{
-        padding:30px;
-    }
+  section{
+    padding:65px 0;
+  }
 
-    section{
-        padding:80px 0;
-    }
+  .section-title h2{
+    font-size:34px;
+  }
 
-    .portfolio-heading{
-        display:block;
-    }
-}
-
-@media(max-width:520px){
-
-    .process{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        letter-spacing:-4px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .service{
-        padding:25px;
-    }
-
-    .footer-grid{
-        flex-direction:column;
-    }
-
-    .video-grid{
-        grid-template-columns:1fr;
-    }
+  .cta-box h2{
+    font-size:32px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="container nav">
+<!-- NAVBAR -->
+<nav>
+  <div class="container nav-inner">
 
-<a href="#" class="logo">
-Velnox<span>Media</span>
-</a>
+    <a href="#home" class="logo">
+      Velnox<span>Media</span>
+    </a>
 
-<nav class="nav-links">
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#process">Process</a>
-<a href="#about">About</a>
+    <a
+      href="https://forms.gle/91r3n3MHn2onbqbX8"
+      target="_blank"
+      class="btn"
+    >
+      Start a Project
+    </a>
 
-<a
-href="https://forms.gle/91r3n3MHn2onbqbX8"
-target="_blank"
-class="nav-cta">
-Start a Project
-</a>
-
+  </div>
 </nav>
-</div>
-</header>
 
 
 <!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-content">
 
-<section class="hero">
+    <div class="badge">
+      Premium Video Editing Agency
+    </div>
 
-<div class="container hero-content">
+    <h1>
+      We Edit.<br>
+      We <span>Elevate.</span>
+    </h1>
 
-<div class="badge">
-CREATIVE EDITING AGENCY
-</div>
+    <p>
+      VelnoxMedia helps creators, brands and businesses
+      turn raw footage into powerful visual content.
+      Creative. Fast. Professional.
+    </p>
 
-<h1>
-We create content
-<span>that gets noticed.</span>
-</h1>
+    <div class="hero-buttons">
 
-<p>
-VelnoxMedia is a professional creative editing agency
-helping creators, brands and businesses turn raw footage
-into powerful digital content.
-</p>
+      <a
+        href="#portfolio"
+        class="btn"
+      >
+        View Our Work
+      </a>
 
-<div class="buttons">
+      <a
+        href="https://forms.gle/91r3n3MHn2onbqbX8"
+        target="_blank"
+        class="btn-outline"
+      >
+        Start a Project
+      </a>
 
-<a
-href="https://forms.gle/91r3n3MHn2onbqbX8"
-target="_blank"
-class="btn btn-primary">
-Start a Project →
-</a>
+    </div>
 
-<a href="#portfolio" class="btn btn-secondary">
-View Our Work
-</a>
-
-</div>
-
-</div>
+  </div>
 </section>
 
 
-<!-- STATS -->
-
-<div class="stats">
-
-<div class="container stats-grid">
-
-<div class="stat">
-<h3>90+</h3>
-<p>Creative Editors</p>
-</div>
-
-<div class="stat">
-<h3>19</h3>
-<p>Portfolio Projects</p>
-</div>
-
-<div class="stat">
-<h3>9+</h3>
-<p>Creative Categories</p>
-</div>
-
-<div class="stat">
-<h3>100%</h3>
-<p>Agency Managed</p>
-</div>
-
-</div>
-</div>
-
-
 <!-- SERVICES -->
-
 <section id="services">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-label">
-Our Services
-</div>
+    <div class="section-title">
+      <h2>What We Do</h2>
+      <p>Professional editing for creators and businesses.</p>
+    </div>
 
-<h2 class="section-title">
-Editing for every<br>
-content format.
-</h2>
+    <div class="services">
 
-<div class="services">
+      <div class="service">
+        <div>🎬</div>
+        <h3>Video Editing</h3>
+        <p>
+          Professional long-form and short-form video editing,
+          storytelling, pacing and post-production.
+        </p>
+      </div>
 
-<a href="#portfolio" class="service">
-<span class="service-number">01 / VIDEO</span>
-<h3>YouTube Editing</h3>
-<p>
-Long-form YouTube videos with professional storytelling,
-pacing, sound design and motion graphics.
-</p>
-<span class="service-link">View Portfolio →</span>
-</a>
+      <div class="service">
+        <div>✨</div>
+        <h3>Motion Graphics</h3>
+        <p>
+          Dynamic animations, titles, transitions and
+          visual effects that make content stand out.
+        </p>
+      </div>
 
-<a href="#portfolio" class="service">
-<span class="service-number">02 / SHORT FORM</span>
-<h3>Shorts & Reels</h3>
-<p>
-High-retention Instagram Reels and YouTube Shorts
-designed for modern audiences.
-</p>
-<span class="service-link">View Portfolio →</span>
-</a>
+      <div class="service">
+        <div>📱</div>
+        <h3>Shorts & Reels</h3>
+        <p>
+          Engaging short-form content optimized for
+          Instagram, YouTube Shorts and social media.
+        </p>
+      </div>
 
-<a href="#portfolio" class="service">
-<span class="service-number">03 / BRAND</span>
-<h3>Ads & Promotion</h3>
-<p>
-Professional editing for brands, campaigns,
-product launches and promotional content.
-</p>
-<span class="service-link">View Portfolio →</span>
-</a>
+      <div class="service">
+        <div>🎮</div>
+        <h3>Gaming Editing</h3>
+        <p>
+          High-energy gaming edits with effects,
+          sound design, transitions and highlights.
+        </p>
+      </div>
 
-<a href="#portfolio" class="service">
-<span class="service-number">04 / CREATIVE</span>
-<h3>Motion & Visuals</h3>
-<p>
-Motion graphics, cinematic edits, gaming,
-podcast and creative video production.
-</p>
-<span class="service-link">View Portfolio →</span>
-</a>
+      <div class="service">
+        <div>📢</div>
+        <h3>Ads & Promotion</h3>
+        <p>
+          Creative promotional videos designed to
+          capture attention and communicate your offer.
+        </p>
+      </div>
 
-</div>
-</div>
+      <div class="service">
+        <div>🎥</div>
+        <h3>Cinematic Editing</h3>
+        <p>
+          Cinematic storytelling, color grading,
+          sound design and professional finishing.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 
 <!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio-section">
 
-<section id="portfolio">
+  <div class="container">
 
-<div class="container">
+    <div class="section-title">
+      <h2>Our Portfolio</h2>
+      <p>Explore our work by category.</p>
+    </div>
 
-<div class="section-label">
-Selected Work
-</div>
+    <div class="categories">
 
-<div class="portfolio-heading">
+      <button class="category active" data-category="all">
+        All
+      </button>
 
-<h2 class="section-title">
-Our creative<br>
-portfolio.
-</h2>
+      <button class="category" data-category="motion">
+        Motion Graphics
+      </button>
 
-</div>
+      <button class="category" data-category="documentary">
+        Documentary
+      </button>
 
-<div class="filters">
+      <button class="category" data-category="gaming">
+        Gaming
+      </button>
 
-<button class="filter-btn active" data-filter="all">
-All
-</button>
+      <button class="category" data-category="podcast">
+        Podcast
+      </button>
 
-<button class="filter-btn" data-filter="motion">
-Motion Graphics
-</button>
+      <button class="category" data-category="cinematic">
+        Cinematic
+      </button>
 
-<button class="filter-btn" data-filter="documentary">
-Documentary
-</button>
+      <button class="category" data-category="movie">
+        Movie Editing
+      </button>
 
-<button class="filter-btn" data-filter="gaming">
-Gaming
-</button>
+      <button class="category" data-category="ads">
+        Ads & Promotion
+      </button>
 
-<button class="filter-btn" data-filter="podcast">
-Podcast
-</button>
+      <button class="category" data-category="bike">
+        Bike & Car
+      </button>
 
-<button class="filter-btn" data-filter="cinematic">
-Cinematic
-</button>
+      <button class="category" data-category="shorts">
+        Shorts & Reels
+      </button>
 
-<button class="filter-btn" data-filter="movie">
-Movie Editing
-</button>
+    </div>
 
-<button class="filter-btn" data-filter="ads">
-Ads & Promotion
-</button>
 
-<button class="filter-btn" data-filter="automotive">
-Bike & Car
-</button>
+    <div class="showing">
+      Showing: <span id="showingText">All Projects</span>
+    </div>
 
-<button class="filter-btn" data-filter="shorts">
-Shorts & Reels
-</button>
 
-</div>
+    <div class="portfolio-grid" id="portfolioGrid">
 
-<div class="category-status">
-Showing: <strong id="currentCategory">All Projects</strong>
-</div>
 
+      <!-- MOTION GRAPHICS -->
+      <div class="project" data-category="motion">
 
-<div class="video-grid" id="videoGrid">
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/4l1v43RU7B4"
+          title="Motion Graphics 1"
+          allowfullscreen>
+        </iframe>
 
+        <div class="project-info">
+          <h3>Motion Graphics</h3>
+          <p>Motion Graphics Project 01</p>
+        </div>
 
-<!-- MOTION GRAPHICS -->
+      </div>
 
-<div class="video-card" data-category="motion">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/4l1v43RU7B4"
-title="Motion Graphics Project 01"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
-</div>
+      <div class="project" data-category="motion">
 
-<div class="video-info">
-<span class="video-category">Motion Graphics</span>
-<h3>Motion Graphics — Project 01</h3>
-<p>Creative motion graphics editing.</p>
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/MZYwsIaQnMk"
+          title="Motion Graphics 2"
+          allowfullscreen>
+        </iframe>
 
-</div>
+        <div class="project-info">
+          <h3>Motion Graphics</h3>
+          <p>Motion Graphics Project 02</p>
+        </div>
 
+      </div>
 
-<!-- NEW MOTION VIDEO -->
 
-<div class="video-card" data-category="motion">
+      <!-- DOCUMENTARY -->
+      <div class="project" data-category="documentary">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/MZYwsIaQnMk"
-title="Motion Graphics Project 02"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/EQPrKuu_JXA"
+          title="Documentary 1"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-info">
-<span class="video-category">Motion Graphics</span>
-<h3>Motion Graphics — Project 02</h3>
-<p>Creative motion graphics editing.</p>
-</div>
+        <div class="project-info">
+          <h3>Documentary</h3>
+          <p>Documentary Project 01</p>
+        </div>
 
-</div>
+      </div>
 
 
-<!-- NEW MOTION VIDEO -->
+      <div class="project" data-category="documentary">
 
-<div class="video-card" data-category="motion">
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/RHsEqVdaswc"
+          title="Documentary 2"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/hd_ZHT-4YLQ"
-title="Motion Graphics Project 03"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
-</div>
+        <div class="project-info">
+          <h3>Documentary</h3>
+          <p>Documentary Project 02</p>
+        </div>
 
-<div class="video-info">
-<span class="video-category">Motion Graphics</span>
-<h3>Motion Graphics — Project 03</h3>
-<p>Creative motion graphics editing.</p>
-</div>
+      </div>
 
-</div>
 
+      <!-- GAMING -->
+      <div class="project" data-category="gaming">
 
-<!-- DOCUMENTARY -->
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/u_wCj_XhlhQ"
+          title="Gaming Edit 1"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-card" data-category="documentary">
+        <div class="project-info">
+          <h3>Gaming Edit</h3>
+          <p>Gaming Project 01</p>
+        </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/EQPrKuu_JXA"
-title="Documentary Project 01"
-allowfullscreen>
-</iframe>
-</div>
+      </div>
 
-<div class="video-info">
-<span class="video-category">Documentary</span>
-<h3>Documentary — Project 01</h3>
-<p>Documentary storytelling edit.</p>
-</div>
 
-</div>
+      <div class="project" data-category="gaming">
 
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/D1sYUMMfS4U"
+          title="Gaming Edit 2"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-card" data-category="documentary">
+        <div class="project-info">
+          <h3>Gaming Edit</h3>
+          <p>Gaming Project 02</p>
+        </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/RHsEqVdaswc"
-title="Documentary Project 02"
-allowfullscreen>
-</iframe>
-</div>
+      </div>
 
-<div class="video-info">
-<span class="video-category">Documentary</span>
-<h3>Documentary — Project 02</h3>
-<p>Documentary storytelling edit.</p>
-</div>
 
-</div>
+      <!-- PODCAST -->
+      <div class="project" data-category="podcast">
 
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/rTYDTnyshIE"
+          title="Podcast Edit 1"
+          allowfullscreen>
+        </iframe>
 
-<!-- GAMING -->
+        <div class="project-info">
+          <h3>Podcast</h3>
+          <p>Podcast Project 01</p>
+        </div>
 
-<div class="video-card" data-category="gaming">
+      </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/u_wCj_XhlhQ"
-title="Gaming Project 01"
-allowfullscreen>
-</iframe>
-</div>
 
-<div class="video-info">
-<span class="video-category">Gaming</span>
-<h3>Gaming Edit — Project 01</h3>
-<p>Dynamic gaming content.</p>
-</div>
+      <div class="project" data-category="podcast">
 
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/GhrOFvtcvJk"
+          title="Podcast Edit 2"
+          allowfullscreen>
+        </iframe>
 
+        <div class="project-info">
+          <h3>Podcast</h3>
+          <p>Podcast Project 02</p>
+        </div>
 
-<div class="video-card" data-category="gaming">
+      </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/D1sYUMMfS4U"
-title="Gaming Project 02"
-allowfullscreen>
-</iframe>
-</div>
 
-<div class="video-info">
-<span class="video-category">Gaming</span>
-<h3>Gaming Edit — Project 02</h3>
-<p>Dynamic gaming content.</p>
-</div>
+      <!-- CINEMATIC -->
+      <div class="project" data-category="cinematic">
 
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/DyiVvZdxw-c"
+          title="Cinematic Edit 1"
+          allowfullscreen>
+        </iframe>
 
+        <div class="project-info">
+          <h3>Cinematic</h3>
+          <p>Cinematic Project 01</p>
+        </div>
 
-<!-- PODCAST -->
+      </div>
 
-<div class="video-card" data-category="podcast">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/rTYDTnyshIE"
-title="Podcast Project 01"
-allowfullscreen>
-</iframe>
-</div>
+      <div class="project" data-category="cinematic">
 
-<div class="video-info">
-<span class="video-category">Podcast</span>
-<h3>Podcast Edit — Project 01</h3>
-<p>Professional podcast editing.</p>
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/wu7RRdQuwDc"
+          title="Cinematic Edit 2"
+          allowfullscreen>
+        </iframe>
 
-</div>
+        <div class="project-info">
+          <h3>Cinematic</h3>
+          <p>Cinematic Project 02</p>
+        </div>
 
+      </div>
 
-<div class="video-card" data-category="podcast">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/GhrOFvtcvJk"
-title="Podcast Project 02"
-allowfullscreen>
-</iframe>
-</div>
+      <!-- MOVIE -->
+      <div class="project" data-category="movie">
 
-<div class="video-info">
-<span class="video-category">Podcast</span>
-<h3>Podcast Edit — Project 02</h3>
-<p>Professional podcast editing.</p>
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/mrZtLu0NrIg"
+          title="Movie Editing 1"
+          allowfullscreen>
+        </iframe>
 
-</div>
+        <div class="project-info">
+          <h3>Movie Editing</h3>
+          <p>Movie Editing Project 01</p>
+        </div>
 
+      </div>
 
-<!-- CINEMATIC -->
 
-<div class="video-card" data-category="cinematic">
+      <div class="project" data-category="movie">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/DyiVvZdxw-c"
-title="Cinematic Project 01"
-allowfullscreen>
-</iframe>
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/JTqwDLFXyZk"
+          title="Movie Editing 2"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-info">
-<span class="video-category">Cinematic</span>
-<h3>Cinematic Edit — Project 01</h3>
-<p>Cinematic visual storytelling.</p>
-</div>
+        <div class="project-info">
+          <h3>Movie Editing</h3>
+          <p>Movie Editing Project 02</p>
+        </div>
 
-</div>
+      </div>
 
 
-<div class="video-card" data-category="cinematic">
+      <!-- ADS -->
+      <div class="project" data-category="ads">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/wu7RRdQuwDc"
-title="Cinematic Project 02"
-allowfullscreen>
-</iframe>
-</div>
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/hSymK2FGoi0"
+          title="Ads Promotion 1"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-info">
-<span class="video-category">Cinematic</span>
-<h3>Cinematic Edit — Project 02</h3>
-<p>Cinematic visual storytelling.</p>
-</div>
+        <div class="project-info">
+          <h3>Ads & Promotion</h3>
+          <p>Advertising Project 01</p>
+        </div>
 
-</div>
+      </div>
 
 
-<!-- MOVIE -->
+      <div class="project" data-category="ads">
 
-<div class="video-card" data-category="movie">
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/deRpzIxpsAI"
+          title="Ads Promotion 2"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/mrZtLu0NrIg"
-title="Movie Editing Project 01"
-allowfullscreen>
-</iframe>
-</div>
+        <div class="project-info">
+          <h3>Ads & Promotion</h3>
+          <p>Advertising Project 02</p>
+        </div>
 
-<div class="video-info">
-<span class="video-category">Movie Editing</span>
-<h3>Movie Edit — Project 01</h3>
-<p>Creative movie editing showcase.</p>
-</div>
+      </div>
 
-</div>
 
+      <!-- BIKE & CAR -->
+      <div class="project" data-category="bike">
 
-<div class="video-card" data-category="movie">
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/RuI4QS8hGjo"
+          title="Bike Car Edit 1"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/JTqwDLFXyZk"
-title="Movie Editing Project 02"
-allowfullscreen>
-</iframe>
-</div>
+        <div class="project-info">
+          <h3>Bike & Car</h3>
+          <p>Automotive Project 01</p>
+        </div>
 
-<div class="video-info">
-<span class="video-category">Movie Editing</span>
-<h3>Movie Edit — Project 02</h3>
-<p>Creative movie editing showcase.</p>
-</div>
+      </div>
 
-</div>
 
+      <div class="project" data-category="bike">
 
-<!-- ADS -->
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/nx4EV9-caNk"
+          title="Bike Car Edit 2"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-card" data-category="ads">
+        <div class="project-info">
+          <h3>Bike & Car</h3>
+          <p>Automotive Project 02</p>
+        </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/hSymK2FGoi0"
-title="Ads Project 01"
-allowfullscreen>
-</iframe>
-</div>
+      </div>
 
-<div class="video-info">
-<span class="video-category">Ads & Promotion</span>
-<h3>Ad Campaign — Project 01</h3>
-<p>Promotional video editing.</p>
-</div>
 
-</div>
+      <!-- SHORTS & REELS -->
+      <div class="project" data-category="shorts">
 
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/p7MQltVJQoQ"
+          title="Shorts Reels 1"
+          allowfullscreen>
+        </iframe>
 
-<div class="video-card" data-category="ads">
+        <div class="project-info">
+          <h3>Shorts & Reels</h3>
+          <p>Short-form Project 01</p>
+        </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/deRpzIxpsAI"
-title="Ads Project 02"
-allowfullscreen>
-</iframe>
-</div>
+      </div>
 
-<div class="video-info">
-<span class="video-category">Ads & Promotion</span>
-<h3>Ad Campaign — Project 02</h3>
-<p>Promotional video editing.</p>
-</div>
 
-</div>
+      <div class="project" data-category="shorts">
 
+        <iframe
+          class="project-video"
+          src="https://www.youtube.com/embed/4xUp09tGwPg"
+          title="Shorts Reels 2"
+          allowfullscreen>
+        </iframe>
 
-<!-- BIKE & CAR -->
+        <div class="project-info">
+          <h3>Shorts & Reels</h3>
+          <p>Short-form Project 02</p>
+        </div>
 
-<div class="video-card" data-category="automotive">
+      </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/RuI4QS8hGjo"
-title="Bike Car Project 01"
-allowfullscreen>
-</iframe>
-</div>
+    </div>
 
-<div class="video-info">
-<span class="video-category">Bike & Car</span>
-<h3>Automotive Edit — Project 01</h3>
-<p>Automotive cinematic editing.</p>
-</div>
+  </div>
 
-</div>
+</section>
 
 
-<div class="video-card" data-category="automotive">
+<!-- CTA -->
+<section class="cta">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/nx4EV9-caNk"
-title="Bike Car Project 02"
-allowfullscreen>
-</iframe>
-</div>
+  <div class="container">
 
-<div class="video-info">
-<span class="video-category">Bike & Car</span>
-<h3>Automotive Edit — Project 02</h3>
-<p>Automotive cinematic editing.</p>
-</div>
+    <div class="cta-box">
 
-</div>
+      <h2>Ready to Start Your Project?</h2>
 
+      <p>
+        Tell us what you need and our team will get back to you.
+      </p>
 
-<!-- SHORTS & REELS -->
+      <a
+        href="https://forms.gle/91r3n3MHn2onbqbX8"
+        target="_blank"
+        class="btn"
+      >
+        Start a Project
+      </a>
 
-<div class="video-card" data-category="shorts">
+    </div>
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/p7MQltVJQoQ"
-title="Shorts Reels Project 01"
-allowfullscreen>
-</iframe>
-</div>
+  </div>
 
-<div class="video-info">
-<span class="video-category">Shorts & Reels</span>
-<h3>Shorts & Reels — Project 01</h3>
-<p>Short-form social media editing.</p>
-</div>
+</section>
 
-</div>
 
+<!-- CONTACT -->
+<section id="contact">
 
-<div class="video-card" data-category="shorts">
+  <div class="container">
 
-<div class="video-wrapper">
-<iframe
-src="https://www.youtube.com/embed/4xUp09tGwPg"
-title="Shorts Reels Project 02"
-allowfullscreen>
-</iframe>
-</div>
+    <div class="section-title">
 
-<div class="video-info">
-<span class="video-category">Short
+      <h2>Contact VelnoxMedia</h2>
+
+      <p>
+        Choose your preferred way to contact us.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <!-- EMAIL -->
+      <a
+        class="contact-card"
+        href="mailto:velnoxmediaofficial@gmail.com"
+      >
+
+        <div class="icon">📧</div>
+
+        <h3>Email</h3>
+
+        <p>
+          velnoxmediaofficial@gmail.com
+        </p>
+
+      </a>
+
+
+      <!-- INSTAGRAM -->
+      <a
+        class="contact-card"
+        href="https://www.instagram.com/velnoxmediaofficial/"
+        target="_blank"
+      >
+
+        <div class="icon">📸</div>
+
+        <h3>Instagram</h3>
+
+        <p>
+          @velnoxmediaofficial
+        </p>
+
+      </a>
+
+
+      <!-- WHATSAPP -->
+      <a
+        class="contact-card"
+        href="https://wa.me/918510917475?text=Hello%20VelnoxMedia%2C%20I%20want%20to%20discuss%20a%20project."
+        target="_blank"
+      >
+
+        <div class="icon">💬</div>
+
+        <h3>WhatsApp</h3>
+
+        <p>
+          +91 85109 17475
+        </p>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="container">
+
+    <p>
+      © 2026 VelnoxMedia. All Rights Reserved.
+    </p>
+
+    <p>
+      Premium Video Editing Agency
+    </p>
+
+  </div>
+
+</footer>
+
+
+<!-- PORTFOLIO FILTER -->
+<script>
+
+const buttons = document.querySelectorAll(".category");
+const projects = document.querySelectorAll(".project");
+const showingText = document.getElementById("showingText");
+
+const categoryNames = {
+  all: "All Projects",
+  motion: "Motion Graphics",
+  documentary: "Documentary",
+  gaming: "Gaming",
+  podcast: "Podcast",
+  cinematic: "Cinematic",
+  movie: "Movie Editing",
+  ads: "Ads & Promotion",
+  bike: "Bike & Car",
+  shorts: "Shorts & Reels"
+};
+
+buttons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const selected = button.dataset.category;
+
+    buttons.forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    projects.forEach(project => {
+
+      if(
+        selected === "all" ||
+        project.dataset.category === selected
+      ){
+        project.style.display = "block";
+      }else{
+        project.style.display = "none";
+      }
+
+    });
+
+    showingText.textContent = categoryNames[selected];
+
+    document
+      .getElementById("portfolio")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
+
+  });
+
+});
+
+</script>
+
+
+<!-- BOTPRESS AI AGENT -->
+<script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+
+<script
+  src="https://files.bpcontent.cloud/2026/08/12/02/20260812022155-9LWUG41Y.js"
+  defer>
+</script>
+
+</body>
+            </html>
